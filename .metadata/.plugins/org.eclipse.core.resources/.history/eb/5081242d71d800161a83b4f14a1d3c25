@@ -1,0 +1,55 @@
+package be.condorcet.servlets;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import be.condorcet.beans.Utilisateur;
+import be.condorcet.metiers.MetierAdresses;
+
+@WebServlet("/Adresses")
+public class ControleurAdresses extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public ControleurAdresses() {
+        super();
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		Utilisateur utilisateur = ((Utilisateur)session.getAttribute("utilisateur"));
+		if (utilisateur != null) {
+			String selectAdresse = request.getParameter("selectAdresse"); // Adrese selectionnée
+			String nouvelleAdresse = request.getParameter("nouvelleAdresse"); // Adrese selectionnée
+			boolean ok = true;
+			MetierAdresses metierAdresses = new MetierAdresses(utilisateur);
+	    	if (request.getParameter("btnVoirMessages") != null && selectAdresse != null) { // Voir mes messages
+	    		ok = false;
+	    		session.setAttribute("adresse", selectAdresse);
+	        	getServletContext().getRequestDispatcher("/JSP/Messages.jsp").forward( request, response );
+	    	}
+	    	else if (request.getParameter("btnSupprimerEmail") != null && selectAdresse != null && !metierAdresses.supprimer(selectAdresse)) { // Supprimer l'adresse
+	    		request.setAttribute("message", metierAdresses.getMessage());
+	    	}
+	    	else if (request.getParameter("btnAjouterAdresse") != null && !metierAdresses.ajouter(nouvelleAdresse)) { // Ajouter une adresse
+	    		request.setAttribute("message", metierAdresses.getMessage());
+	    	}
+	    	if (ok) {
+	    		metierAdresses.adresses();
+	    		getServletContext().getRequestDispatcher("/JSP/Adresses.jsp").forward( request, response );
+	    	}
+		}
+		else {
+			getServletContext().getRequestDispatcher("/JSP/Connexion.jsp").forward( request, response );
+		}
+	}
+}
+
+

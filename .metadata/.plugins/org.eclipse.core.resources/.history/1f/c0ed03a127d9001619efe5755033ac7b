@@ -1,0 +1,28 @@
+package be.condorcet.metiers;
+
+import java.util.ArrayList;
+
+import be.condorcet.beans.Adresse;
+import be.condorcet.beans.Utilisateur;
+import be.condorcet.dao.DAOAdresse;
+
+public class MetierAdressesIndesirables {
+	private Utilisateur utilisateur;
+	private String message;
+	
+	public MetierAdressesIndesirables(Utilisateur utilisateur) {
+		this.utilisateur = utilisateur;
+	}
+	
+	public String getMessage() { return message; }
+
+	public void adresses() {
+		utilisateur.effacerAdresses();
+		DAOAdresse daoAdresse = new DAOAdresse();
+		ArrayList<Adresse> adresses = daoAdresse.find(utilisateur);
+		for (Adresse adresse : adresses) {
+			utilisateur.ajouterAdresse(adresse);
+		}
+		message = daoAdresse.getMessage();
+	}
+}

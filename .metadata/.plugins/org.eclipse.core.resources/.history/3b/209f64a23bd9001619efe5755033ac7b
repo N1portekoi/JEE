@@ -1,0 +1,28 @@
+package be.condorcet.metiers;
+
+import be.condorcet.dao.DAOAdresseIndesirable;
+
+public class MetierAddAdresseIndesirable {
+	private String adresse;
+	private String adresseInde;
+	private String message;
+	
+	public MetierAddAdresseIndesirable(String adresse, String adresseInde) {
+		this.adresse = adresse;
+		this.adresseInde = adresseInde;
+	}
+	
+	public String getMessage() { return message; }
+
+	public boolean addAdresseInde() {
+		boolean ok = true;
+		DAOAdresseIndesirable daoAdresseIndesirable = new DAOAdresseIndesirable();
+		if (daoAdresseIndesirable.create(adresse, adresseInde)) {
+			message = "Adresse ajoutée !";
+		}
+		else {
+			message = daoAdresseIndesirable.getMessage();
+		}
+		return ok;
+	}
+}

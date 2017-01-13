@@ -1,0 +1,36 @@
+package be.condorcet.metiers;
+
+import be.condorcet.beans.MessageEnvoye;
+import be.condorcet.dao.DAOMessageEnvoye;
+
+public class MetierNouveauMessage {
+	private String destinataire;
+	private String objet;
+	private String mess;
+	private String message;
+	
+	public MetierNouveauMessage(String destinataire, String objet, String mess) {
+		this.destinataire = destinataire;
+		this.objet = objet;
+		this.mess = mess;
+	}
+	
+	public String getMessage() { return message; }
+	
+	public boolean nouveauMessage() {
+		boolean check = true;
+		if (destinataire.length() == 0) {
+			check = false;
+			message = "Champ vide : Votre nouvelle adresse.";
+		}
+		if (check) {
+			MessageEnvoye messageEnvoye = new MessageEnvoye();
+			messageEnvoye.setDestinataire(destinataire);
+			messageEnvoye.setMessage(mess);
+			messageEnvoye.setObjet(objet);
+			DAOMessageEnvoye daoMessageEnvoye = new daoMessageEnvoye();
+			daoMessageEnvoye
+		}
+		return false;
+	}
+}

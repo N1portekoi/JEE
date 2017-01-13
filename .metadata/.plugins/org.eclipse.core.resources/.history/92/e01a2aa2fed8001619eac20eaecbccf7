@@ -1,0 +1,26 @@
+package be.condorcet.metiers;
+
+import java.util.ArrayList;
+
+import be.condorcet.beans.Adresse;
+import be.condorcet.beans.MessageRecu;
+import be.condorcet.beans.Utilisateur;
+import be.condorcet.dao.DAOMessageRecu;
+
+public class MetierMessageRecu {
+	private int id;
+	private String message;
+	
+	public MetierMessageRecu(int id) {
+		this.id = id;
+	}
+	
+	public String getMessage() { return message; }
+	
+	public MessageRecu messageRecu() {
+		DAOMessageRecu daoMessageRecu = new DAOMessageRecu();
+		MessageRecu messageRecu = daoMessageRecu.find(id);
+		message = daoMessageRecu.getMessage();
+    	return messageRecu;
+	}
+}

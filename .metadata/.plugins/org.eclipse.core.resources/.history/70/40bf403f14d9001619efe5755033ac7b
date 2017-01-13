@@ -1,0 +1,18 @@
+package be.condorcet.metiers;
+
+import be.condorcet.beans.MessageRecu;
+import be.condorcet.dao.DAOMessageRecu;
+
+public class MetierNouveauMessage {
+	private int id;
+	private String message;
+	
+	public MetierNouveauMessage(int id) {
+		this.id = id;
+	}
+	
+	public String getMessage() { return message; }
+	
+	public MessageRecu messageRecu() {
+	}
+}

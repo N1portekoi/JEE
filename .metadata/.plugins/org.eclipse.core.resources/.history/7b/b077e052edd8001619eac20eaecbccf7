@@ -1,0 +1,82 @@
+body
+{
+	background-color : #daa420;
+}
+
+#main
+{
+	position : relative;
+	background-color : red;
+	height : 500px;
+	width : 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50vh;
+  	transform: translateY(-50%);
+}
+
+#menu
+{
+	background-color : blue;
+	height : 500px;
+	width : 240px;
+}
+
+#tools
+{
+	position : absolute;
+	top : 0px;
+	left : 250px;
+	background-color : yellow;
+	height : 100px;
+	width : 750px;
+}
+
+#messages
+{
+	position : absolute;
+	background-color : green;
+	height : 390px;
+	width : 750px;
+	top : 110px;
+	left : 250px;
+	overflow: auto;
+}
+
+#menuCompte
+{
+	background-color : pink;
+}
+
+
+div
+{
+	border-radius : 15px;
+}
+
+table
+{
+	background-color : white;
+}
+
+th, td
+{
+	border-bottom : 1px solid black;
+}
+
+.date
+{
+	width:150px;
+	text-align:center;
+}
+
+.expediteur
+{
+	width:250px;
+	text-align:center;
+}
+
+.objet
+{
+	width : 350px;
+}

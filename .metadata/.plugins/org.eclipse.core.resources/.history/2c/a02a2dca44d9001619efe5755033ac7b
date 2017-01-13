@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Web Mail - Enregistrement</title>
+<link type="text/css" rel="stylesheet" href="CSS/Enregistrement.css" />
+</head>
+<body>
+	<div id="main">
+		<p>S'enregistrer</p>
+		<form method="POST" action="Enregistrement">
+			<input id="textLogin"      type="text"     name="pseudo" maxlength="15" placeholder="Login">
+			<input id="textPassword"   type="password" name="password"  maxlength="15" placeholder="Password">
+			<input id="textPassword2"  type="password" name="password2" maxlength="15" placeholder="Vérification du password">
+			<input id="textNom"        type="text"     name="nom"       maxlength="50" placeholder="Nom">
+			<input id="textPrenom"     type="text"     name="prenom"    maxlength="50" placeholder="Prenom">
+            <input id="btnEnregistrer" type="submit"   value="Enregistrer" />
+		</form>
+		<form method="GET" action="Connexion">
+			<input id="btnRetour" type="submit"   value="Retour"/>
+		</form>
+	</div>
+	<div id="message">
+		${message}
+	</div>
+</body>
+</html>

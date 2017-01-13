@@ -1,0 +1,3 @@
+#GlassFish 3
+#Fri Jan 13 05:08:50 CET 2017
+org.eclipse.jst.jee.server\:WebMail=D\:\\Program Files\\Glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\WebMail

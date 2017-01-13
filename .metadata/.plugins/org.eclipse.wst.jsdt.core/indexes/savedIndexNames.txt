@@ -1,0 +1,8 @@
+INDEX VERSION 1.3+C:\Users\Ludovic\JEE\workspaceJEE_stablum_stalon\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3894950723.index
+2982557563.index
+814675474.index
+714631634.index
+3930228855.index
+3462690688.index
+2447226286.index

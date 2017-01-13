@@ -1,0 +1,18 @@
+package be.condorcet.dao;
+
+import java.sql.CallableStatement;
+import java.sql.SQLException;
+import java.sql.Types;
+import java.util.ArrayList;
+
+import be.condorcet.beans.Adresse;
+import be.condorcet.beans.Utilisateur;
+
+public class DAOMessage extends DAO {
+	public DAOMessage() {
+		super();
+	}
+	
+}
+
+

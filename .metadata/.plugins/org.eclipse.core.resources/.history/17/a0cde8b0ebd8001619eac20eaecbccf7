@@ -1,0 +1,23 @@
+<div id="menu">
+	<p>${sessionScope.utilisateur.prenom}</p>
+	<p>${sessionScope.utilisateur.nom}</p>
+	<p>${sessionScope.adresse}</p>
+	<form class="messageRecu" method="POST" action="MessagesRecus">
+		<input type="submit"   value="Messages reçus" />
+	</form>
+	<form class="messageEnvoye" method="POST" action="MessagesEnvoyes">
+		<input type="submit"   value="Messages envoyés" />
+	</form>
+	<form class="messageInde" method="POST" action="MessagesIndesirables">
+		<input type="submit"   value="Messages indésirable" />
+	</form>
+	<form class="messageSuppr" method="POST" action="MessagesSupprimes">
+		<input type="submit"   value="Messages Supprimes" />
+	</form>
+	<form method="POST" action="Adresses">
+		<input type="submit"   value="Changer d'adresse" />
+	</form>
+	<form class="deco"method="GET" action="Connexion">
+		<input type="submit"   value="Deconnexion" />
+	</form>
+</div>

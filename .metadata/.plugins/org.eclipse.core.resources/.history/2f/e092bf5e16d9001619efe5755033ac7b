@@ -1,0 +1,28 @@
+package be.condorcet.metiers;
+
+public class MetierNouveauMessage {
+	private String destinataire;
+	private String objet;
+	private String mess;
+	private String message;
+	
+	public MetierNouveauMessage(String destinataire, String objet, String mess) {
+		this.destinataire = destinataire;
+		this.objet = objet;
+		this.mess = mess;
+	}
+	
+	public String getMessage() { return message; }
+	
+	public boolean destinataire() {
+		boolean check = true;
+		if (destinataire.length() == 0) {
+			check = false;
+			message = "Champ vide : Votre nouvelle adresse.";
+		}
+		if (check) {
+			MessageEnvoye = new MessageEnvoye();
+		}
+		return false;
+	}
+}

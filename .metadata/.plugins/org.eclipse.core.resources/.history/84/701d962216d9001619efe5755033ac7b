@@ -1,0 +1,20 @@
+package be.condorcet.metiers;
+
+public class MetierNouveauMessage {
+	private String destinataire;
+	private String objet;
+	private String mess;
+	private String message;
+	
+	public MetierNouveauMessage(String destinataire, String objet, String mess) {
+		this.destinataire = destinataire;
+		this.objet = objet;
+		this.mess = mess;
+	}
+	
+	public String getMessage() { return message; }
+	
+	public boolean nouveauMessage() {
+		return false;
+	}
+}

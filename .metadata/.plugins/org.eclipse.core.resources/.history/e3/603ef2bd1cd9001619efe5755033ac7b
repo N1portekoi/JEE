@@ -1,0 +1,25 @@
+package be.condorcet.metiers;
+
+import be.condorcet.beans.Adresse;
+import be.condorcet.beans.MessageEnvoye;
+import be.condorcet.beans.Utilisateur;
+import be.condorcet.dao.DAOMessageEnvoye;
+
+public class MetierMessageCorbeille {
+	private int id;
+	private String message;
+	
+	public MetierMessageCorbeille(String destinataire, String objet, String mess, Utilisateur utilisateur, String adresse) {
+		this.expediteur = utilisateur.findAdresse(adresse);
+		this.destinataire = destinataire.trim();
+		this.objet = objet;
+		this.mess = mess;
+	}
+	
+	public String getMessage() { return message; }
+	
+	public boolean nouveauMessage() {
+		
+		return check;
+	}
+}

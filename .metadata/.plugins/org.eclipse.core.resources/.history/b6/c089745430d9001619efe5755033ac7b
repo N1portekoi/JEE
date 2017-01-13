@@ -1,0 +1,23 @@
+package be.condorcet.metiers;
+
+import java.util.ArrayList;
+
+import be.condorcet.dao.DAOAdresseIndesirable;
+
+public class MetierAdresseIndesirable {
+	private String adresse;
+	private String message;
+	
+	public MetierAdresseIndesirable(String adresse) {
+		this.adresse = adresse;
+	}
+	
+	public String getMessage() { return message; }
+
+	public ArrayList<String> adresseInde() {
+		DAOAdresseIndesirable daoAdresseIndesirable = new DAOAdresseIndesirable();
+		daoAdresseIndesirable.find(adresse)
+		ArrayList<String> adresses = 
+		return null;
+	}
+}

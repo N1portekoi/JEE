@@ -1,0 +1,25 @@
+package be.condorcet.metiers;
+
+import java.util.ArrayList;
+
+import be.condorcet.beans.Adresse;
+import be.condorcet.beans.Utilisateur;
+import be.condorcet.dao.DAOAdresse;
+
+public class MetierAddAdresseIndesirable {
+	private String adresse;
+	private String adresseInde;
+	private String message;
+	
+	public MetierAddAdresseIndesirable(String adresse, String adresseInde) {
+		this.adresse = adresse;
+		this.adresseInde = adresseInde;
+	}
+	
+	public String getMessage() { return message; }
+
+	public boolean addAdresseInde() {
+		boolean ok = true;
+		return ok;
+	}
+}

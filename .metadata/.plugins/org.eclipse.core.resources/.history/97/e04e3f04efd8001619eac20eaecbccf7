@@ -1,0 +1,31 @@
+div
+{
+	border-radius : 15px;
+}
+
+table
+{
+	background-color : white;
+}
+
+th, td
+{
+	border-bottom : 1px solid black;
+}
+
+.date
+{
+	width:150px;
+	text-align:center;
+}
+
+.destinataire
+{
+	width:250px;
+	text-align:center;
+}
+
+.objet
+{
+	width : 350px;
+}

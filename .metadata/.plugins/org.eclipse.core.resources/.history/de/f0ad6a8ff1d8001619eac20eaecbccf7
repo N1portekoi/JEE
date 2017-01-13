@@ -1,0 +1,26 @@
+.expe
+{
+	position : absolute;
+	height : 25px;
+	width : 100px;
+	top : 0px;
+	left : 0px;
+	}
+
+.objet
+{
+	position : absolute;
+	height : 25px;
+	width : 100px;
+	top : 0px;
+	left : 0px;
+}
+
+.message
+{
+	position : absolute;
+	top : 0px;
+	left : 0px;
+	height : 400px;
+	width : 750px;
+}

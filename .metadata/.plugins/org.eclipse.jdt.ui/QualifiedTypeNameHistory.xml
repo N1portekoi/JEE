@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="be.condorcet.metiers.MetierMessageEnvoye"/>
+<fullyQualifiedTypeName name="be.condorcet.beans.MessageRecu"/>
+<fullyQualifiedTypeName name="be.condorcet.dao.DAOMessageIndesirable"/>
+<fullyQualifiedTypeName name="be.condorcet.beans.MessageIndesirable"/>
+<fullyQualifiedTypeName name="be.condorcet.metiers.MetierMessageIndesirable"/>
+<fullyQualifiedTypeName name="be.condorcet.metiers.MetierNouveauMessage"/>
+<fullyQualifiedTypeName name="be.condorcet.beans.MessageEnvoye"/>
+<fullyQualifiedTypeName name="be.condorcet.dao.DAOMessageEnvoye"/>
+<fullyQualifiedTypeName name="be.condorcet.beans.Adresse"/>
+<fullyQualifiedTypeName name="be.condorcet.beans.Utilisateur"/>
+<fullyQualifiedTypeName name="be.condorcet.dao.DAOMessage"/>
+<fullyQualifiedTypeName name="be.condorcet.metiers.MetierMessageCorbeille"/>
+<fullyQualifiedTypeName name="be.condorcet.metiers.MetierSupprimerMessage"/>
+<fullyQualifiedTypeName name="be.condorcet.metiers.MetierAdressesIndesirables"/>
+<fullyQualifiedTypeName name="be.condorcet.dao.DAOAdresseIndesirable"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="be.condorcet.metiers.MetierAddAdresseIndesirable"/>
+<fullyQualifiedTypeName name="be.condorcet.metiers.MetierAdresseIndesirable"/>
+<fullyQualifiedTypeName name="be.condorcet.metiers.MetierDelAdresseIndesirable"/>
+<fullyQualifiedTypeName name="javax.mail.internet.InternetAddress"/>
+<fullyQualifiedTypeName name="javax.mail.internet.AddressException"/>
+</qualifiedTypeNameHistroy>
