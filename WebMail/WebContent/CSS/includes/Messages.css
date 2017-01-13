@@ -1,0 +1,72 @@
+body
+{
+  background-color : #5F9F9F;
+}
+
+#main
+{
+	position : relative;
+	background-color : #5F9F9F;
+	height : 500px;
+	width : 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50vh;
+  	transform: translateY(-50%);
+}
+
+#menu
+{
+	border-radius : 5px;
+	background-color : #4c5d65;
+	height : 500px;
+	width : 240px;
+}
+
+p
+{
+  	display : inline;
+  	text-align : center;
+	margin-top : 10px;
+	margin-bottom : 10px;
+  	margin-right : 20px;
+	color : #ffffff;
+}
+
+.boutonMsg
+{
+  text-align : center;
+  border-radius : 10px; 
+  height : 24px;
+  width : 200px;
+  margin-left : 10px;
+  margin-top : 10px;
+}
+
+#tools
+{
+	border-radius : 5px;
+	position : absolute;
+	top : 0px;
+	left : 250px;
+	background-color : #4c5d65;
+	height : 100px;
+	width : 750px;
+}
+
+#messages
+{
+	border-radius : 5px;
+	position : absolute;
+	background-color : #4c5d65;
+	height : 390px;
+	width : 750px;
+	top : 110px;
+	left : 250px;
+	overflow: auto;
+}
+
+#menuCompte
+{
+	background-color : #5F9F9F;
+}
