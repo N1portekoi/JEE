@@ -1,0 +1,27 @@
+package be.condorcet.metiers;
+
+import java.util.ArrayList;
+
+import be.condorcet.beans.Adresse;
+import be.condorcet.beans.MessageEnvoye;
+import be.condorcet.beans.Utilisateur;
+import be.condorcet.dao.DAOMessageEnvoye;
+
+public class MetierMessagesEnvoyes {
+	private Adresse adresse;
+	private String message;
+	
+	public MetierMessagesEnvoyes(String adresse, Utilisateur utilisateur) {
+		this.adresse = utilisateur.findAdresse(adresse);
+	}
+	
+	public String getMessage() { return message; }
+	
+	// Recupere les messages envoyés
+	public ArrayList<MessageEnvoye> messagesEnvoyes() {
+		DAOMessageEnvoye daoMessageEnvoye = new DAOMessageEnvoye();
+		ArrayList<MessageEnvoye> messagesEnvoyes = daoMessageEnvoye.find(adresse);
+		message = daoMessageEnvoye.getMessage();
+    	return messagesEnvoyes;
+	}
+}
